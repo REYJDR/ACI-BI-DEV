@@ -1,0 +1,17 @@
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.Properties.Resources.resources
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.Ribbon1.resources
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.csproj.GenerateResource.Cache
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Sage50Excel13Plugin.dll.config
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Sage50Excel13Plugin.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Sage50Excel13Plugin.pdb
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Sage50Excel13Plugin.dll.manifest
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Sage50Excel13Plugin.vsto
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.Office.Tools.Common.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.Office.Tools.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.Office.Tools.Excel.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.Office.Tools.v4.0.Framework.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Debug\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.dll
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Debug\Sage50Excel13Plugin.pdb
