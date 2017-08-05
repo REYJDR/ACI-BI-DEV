@@ -34,50 +34,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab1 = this.Factory.CreateRibbonTab();
-            this.group1 = this.Factory.CreateRibbonGroup();
+            this.TabAci = this.Factory.CreateRibbonTab();
+            this.GrpReportes = this.Factory.CreateRibbonGroup();
             this.BtnCarteraVencida = this.Factory.CreateRibbonButton();
-            this.tab1.SuspendLayout();
-            this.group1.SuspendLayout();
+            this.GrpConfiguracion = this.Factory.CreateRibbonGroup();
+            this.BtnConexion = this.Factory.CreateRibbonButton();
+            this.TabAci.SuspendLayout();
+            this.GrpReportes.SuspendLayout();
+            this.GrpConfiguracion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tab1
+            // TabAci
             // 
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.Groups.Add(this.group1);
-            this.tab1.Label = "ACI - BI";
-            this.tab1.Name = "tab1";
+            this.TabAci.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.TabAci.Groups.Add(this.GrpReportes);
+            this.TabAci.Groups.Add(this.GrpConfiguracion);
+            this.TabAci.Label = "ACI - BI";
+            this.TabAci.Name = "TabAci";
             // 
-            // group1
+            // GrpReportes
             // 
-            this.group1.Items.Add(this.BtnCarteraVencida);
-            this.group1.Label = "Reportes";
-            this.group1.Name = "group1";
+            this.GrpReportes.Items.Add(this.BtnCarteraVencida);
+            this.GrpReportes.Label = "Reportes";
+            this.GrpReportes.Name = "GrpReportes";
             // 
             // BtnCarteraVencida
             // 
             this.BtnCarteraVencida.Label = "Cartera Vencida";
             this.BtnCarteraVencida.Name = "BtnCarteraVencida";
             // 
+            // GrpConfiguracion
+            // 
+            this.GrpConfiguracion.Items.Add(this.BtnConexion);
+            this.GrpConfiguracion.Label = "Configuracion";
+            this.GrpConfiguracion.Name = "GrpConfiguracion";
+            // 
+            // BtnConexion
+            // 
+            this.BtnConexion.Image = global::Sage50Excel13Plugin.Properties.Resources.Cog;
+            this.BtnConexion.Label = "Conexion";
+            this.BtnConexion.Name = "BtnConexion";
+            this.BtnConexion.ShowImage = true;
+            // 
             // Ribbon1
             // 
             this.Name = "Ribbon1";
             this.RibbonType = "Microsoft.Excel.Workbook";
-            this.Tabs.Add(this.tab1);
+            this.Tabs.Add(this.TabAci);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon1_Load);
-            this.tab1.ResumeLayout(false);
-            this.tab1.PerformLayout();
-            this.group1.ResumeLayout(false);
-            this.group1.PerformLayout();
+            this.TabAci.ResumeLayout(false);
+            this.TabAci.PerformLayout();
+            this.GrpReportes.ResumeLayout(false);
+            this.GrpReportes.PerformLayout();
+            this.GrpConfiguracion.ResumeLayout(false);
+            this.GrpConfiguracion.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonTab TabAci;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup GrpReportes;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnCarteraVencida;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup GrpConfiguracion;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnConexion;
     }
 
     partial class ThisRibbonCollection
