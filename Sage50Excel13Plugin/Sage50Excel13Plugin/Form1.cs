@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Interop.Excel;
 
 namespace Sage50Excel13Plugin
 {
@@ -26,7 +27,7 @@ namespace Sage50Excel13Plugin
         {
 
             dbConn.StartConn();
-            DataTable data = new DataTable();
+            System.Data.DataTable data = new System.Data.DataTable();
 
             if (dbConn.StartConn().State == System.Data.ConnectionState.Open)
             {
@@ -51,17 +52,17 @@ namespace Sage50Excel13Plugin
 
         private void BtnGetreport_Click(object sender, EventArgs e)
         {
-            string itemId = Convert.ToString(CboItemlist.SelectedValue);
+            
 
             DbConnetion dbConn = new DbConnetion();
             
             Excel._Worksheet objSheet;
-
-            double[]  sumAmount  = new double[6];
+            
             Dictionary<string,double> custAmount = new Dictionary<string,double>();
             string Customers = "";
             string valToCell = "";
-            
+            double[]  sumAmount  = new double[6];
+            string itemId = Convert.ToString(CboItemlist.SelectedValue);
 
             try
             {
@@ -93,7 +94,7 @@ namespace Sage50Excel13Plugin
                     objSheet.Cells[5, 6] = "120+";
                     objSheet.Cells[5, 7] = "Total";
 
-                    DataTable data = new DataTable();
+                    System.Data.DataTable data = new System.Data.DataTable();
                     string query = "SELECT " +
                                     " Customers.Customer_Bill_Name, " +
                                     " JrnlHdr.TransactionDate, " +
@@ -117,69 +118,97 @@ namespace Sage50Excel13Plugin
                     if (data.Rows.Count > 0)
                     {
                         int i = 0;
-                        
-                            while (i < data.Rows.Count) { 
+                        int n = i;
+                       
 
+                        while (i < data.Rows.Count) {
 
-
-
-                            string dateTrx = data.Rows[i].ItemArray[1].ToString(); //Transaction Date
-
-                            double days = (DateTime.Today - Convert.ToDateTime(dateTrx)).TotalDays; //Days Expired
-
-                                if (days <= 30)
-                                {
-                                
-
-                                     valToCell = SumValue((string)(objSheet.Cells[i + 6, 2] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
-
-                                     objSheet.Cells[i + 6, 2] = valToCell;
-
-                                }
-                                if (days > 30 & days <= 60)
-                                {
-                                    valToCell = SumValue((string)(objSheet.Cells[i + 6, 3] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
-
-                                    objSheet.Cells[i + 6, 3] = valToCell;
-                                }
-                                if (days > 60 & days <= 90)
-                                {
-                                    valToCell = SumValue((string)(objSheet.Cells[i + 6, 4] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
-
-                                    objSheet.Cells[i + 6, 4] = valToCell;
-                                }
-                                if (days > 90 & days <= 120)
-                                {
-                                    valToCell = SumValue((string)(objSheet.Cells[i + 6, 5] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
-
-                                    objSheet.Cells[i + 6, 5] = valToCell;
-                                }
-
-                                if (days > 120) 
-                                {
-                                    valToCell = SumValue((string)(objSheet.Cells[i + 6, 6] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
-
-                                    objSheet.Cells[i + 6, 6] = valToCell;
-                                }
-
-                                objSheet.Cells[i + 6, 7].Formula = "=Sum(B" + (i+6) + ":F" + (i + 6) + ")"; //Total
+                            
 
                             if (data.Rows[i].ItemArray[0] != null)
                             {
+                                string dateTrx = data.Rows[i].ItemArray[1].ToString(); //Transaction Date
+
+                                double days = (DateTime.Today - Convert.ToDateTime(dateTrx)).TotalDays; //Days Expired
+
+                                
+
                                 if (Customers != data.Rows[i].ItemArray[0].ToString())
                                 {
                                     objSheet.Cells[i + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
                                     Customers = data.Rows[i].ItemArray[0].ToString();
-                                    i++;
+
+                                    n = i;
+                                }
+                                else
+                                {
+                                    n = n ;
+                                }
+
+                                if (days <= 30)
+                                {
+                                
+                                     valToCell = SumValue((objSheet.Cells[n + 6, 2] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                     objSheet.Cells[n + 6, 2] = valToCell;
 
                                 }
+                                if (days > 30 & days <= 60)
+                                {
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 3] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                    objSheet.Cells[n + 6, 3] = valToCell;
+                                }
+                                if (days > 60 & days <= 90)
+                                {
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 4] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                    objSheet.Cells[n + 6, 4] = valToCell;
+                                }
+                                if (days > 90 & days <= 120)
+                                {
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 5] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                    objSheet.Cells[n + 6, 5] = valToCell;
+                                }
+
+                                if (days > 120) 
+                                {
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 6] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                    objSheet.Cells[n + 6, 6] = valToCell;
+                                }
+                                
+
+                                objSheet.Cells[n + 6, 7].Formula = "=Sum(B" + (n+6) + ":F" + (n + 6) + ")"; //Total
+
+                                
+                                i++;
+
+
 
                             }
 
 
                         }
                     }
-                   objSheet.Columns.AutoFit();
+                  
+                    //elimina lineas en blanco
+                    Excel.Range range =objSheet.UsedRange;
+                    int rowcount = range.Rows.Count;
+                    for (int l = 6; l < rowcount; l++)
+                    {
+                        Excel.Range rg = objSheet.get_Range("A" + l.ToString());
+                        if (Convert.ToString(rg.Value2) == null)
+                        {
+                            ((Excel.Range)objSheet.Range["A" + l.ToString(), "G" + l.ToString()]).EntireRow.Delete(null);
+                            l--;
+                            rowcount--;
+                        }
+                    }
+
+                    //ACOMODA LAS CELDAS
+                    objSheet.Columns.AutoFit();
 
                 }
             }
@@ -196,12 +225,13 @@ namespace Sage50Excel13Plugin
 
         }
 
-        public string SumValue(string val1 , string val2)
+        public string SumValue(object val1 , string val2)
         {
             string cellValue;
             double sum;
 
-            if (val1 == null) { val1 = "0"; }
+
+            if (val1 == null) { val1 = 0; }
 
             sum =  Convert.ToDouble(val1) + Convert.ToDouble(val2);
             cellValue = Convert.ToString(sum);
