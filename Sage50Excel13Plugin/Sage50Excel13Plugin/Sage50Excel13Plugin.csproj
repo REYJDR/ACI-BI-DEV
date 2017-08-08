@@ -173,7 +173,6 @@
   <ItemGroup>
     <Compile Include="DbConnetion.cs" />
     <Compile Include="DbParam.cs" />
-    <Compile Include="Dictionary.cs" />
     <Compile Include="FormDbConfig.cs">
       <SubType>Form</SubType>
     </Compile>
