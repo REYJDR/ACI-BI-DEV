@@ -76,6 +76,7 @@
             this.BtnCondb.Label = "Conexion DB";
             this.BtnCondb.Name = "BtnCondb";
             this.BtnCondb.ShowImage = true;
+            this.BtnCondb.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnCondb_Click);
             // 
             // RibAciBI
             // 

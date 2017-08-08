@@ -17,5 +17,10 @@ namespace Sage50Excel13Plugin
         {
             new FormRepAntItem().ShowDialog();
         }
+
+        private void BtnCondb_Click(object sender, RibbonControlEventArgs e)
+        {
+            new FormDbConfig().ShowDialog();
+        }
     }
 }

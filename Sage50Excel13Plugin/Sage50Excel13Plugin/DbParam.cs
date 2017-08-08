@@ -58,22 +58,29 @@ namespace Sage50Excel13Plugin
         public string ConString()
         {
             string strConn;
+            string path = Sage50db.txt.Text;
 
             // create reader & open file
-            TextReader file = new StreamReader("Sage50db.txt");
+           if (File.Exists("Sage50db.txt"){
 
-            Hostaname = file.ReadLine();
-            dbname = file.ReadLine();
-            User = file.ReadLine();
-            Password = file.ReadLine();
+                TextReader file = new StreamReader("Sage50db.txt");
 
-            strConn = "Driver={Pervasive ODBC Client Interface};" +
-                                "servername=" + Hostaname + ";dbq=" + dbname + ";" +
-                                "uid=" + User + ";" +
-                                "pwd=" + Password;
+                Hostaname = file.ReadLine();
+                dbname = file.ReadLine();
+                User = file.ReadLine();
+                Password = file.ReadLine();
 
-            // close the stream
-            file.Close();
+                strConn = "Driver={Pervasive ODBC Client Interface};" +
+                                    "servername=" + Hostaname + ";dbq=" + dbname + ";" +
+                                    "uid=" + User + ";" +
+                                    "pwd=" + Password;
+
+                // close the stream
+                file.Close();
+
+
+            }
+
 
             return strConn;
         }
