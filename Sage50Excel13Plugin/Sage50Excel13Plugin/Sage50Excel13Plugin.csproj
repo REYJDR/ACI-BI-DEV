@@ -173,17 +173,17 @@
   <ItemGroup>
     <Compile Include="DbConnetion.cs" />
     <Compile Include="Dictionary.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormRepAntItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormRepAntItem.Designer.cs">
+      <DependentUpon>FormRepAntItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormRepAntItem.resx">
+      <DependentUpon>FormRepAntItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -195,8 +195,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ribbon1.resx">
-      <DependentUpon>Ribbon1.cs</DependentUpon>
+    <EmbeddedResource Include="RibAciBI.resx">
+      <DependentUpon>RibAciBI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -208,11 +208,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Ribbon1.cs">
+    <Compile Include="RibAciBI.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Ribbon1.Designer.cs">
-      <DependentUpon>Ribbon1.cs</DependentUpon>
+    <Compile Include="RibAciBI.Designer.cs">
+      <DependentUpon>RibAciBI.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
