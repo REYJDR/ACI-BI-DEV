@@ -22,16 +22,5 @@ namespace Sage50Excel13Plugin.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Driver={Pervasive ODBC Client Interface};servername=localhost;dbq=ELASADOR;uid=Pe" +
-            "achtree;pwd=admin123")]
-        public string ConnectionString {
-            get {
-                return ((string)(this["ConnectionString"]));
-            }
-        }
     }
 }

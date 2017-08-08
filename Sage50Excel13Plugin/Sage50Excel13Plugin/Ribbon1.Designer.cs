@@ -62,6 +62,7 @@
             // 
             this.BtnCarteraVencida.Label = "Cartera Vencida";
             this.BtnCarteraVencida.Name = "BtnCarteraVencida";
+            this.BtnCarteraVencida.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnCarteraVencida_Click);
             // 
             // GrpConfiguracion
             // 

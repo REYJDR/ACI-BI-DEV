@@ -222,6 +222,8 @@ namespace Sage50Excel13Plugin {
                 return _ThisRibbonCollection;
             }
         }
+
+        public static object ThisAddin { get; internal set; }
     }
     
     /// 
