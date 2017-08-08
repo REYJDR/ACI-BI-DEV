@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
-          requestedExecutionLevel node with one of the following.
+          Opciones del manifiesto de UAC
+          Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
+          nodo requestedExecutionLevel por uno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
-         compatibility then delete the requestedExecutionLevel node.
+         Si desea usar Virtualización de archivos y Registro para compatibilidad con 
+         versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -124,14 +124,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sage50Excel13Plugin.dll" size="33280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Sage50Excel13Plugin.dll" size="36864">
       <assemblyIdentity name="Sage50Excel13Plugin" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>35/xz1neFGRI37m7R3HHce4EuF16YPvBb44KC1TJ0RQ=</dsig:DigestValue>
+        <dsig:DigestValue>fUszcCGeYQH4JpAzuRHMlcXp7TCi8XzWTkEfj0ytBmA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -162,11 +162,11 @@
             <vstov4:friendlyName>Sage50Excel13Plugin</vstov4:friendlyName>
             <vstov4:description>Sage50Excel13Plugin</vstov4:description>
             <vstov4.1:ribbonTypes xmlns:vstov4.1="urn:schemas-microsoft-com:vsto.v4.1">
-              <vstov4.1:ribbonType name="Sage50Excel13Plugin.Ribbon1, Sage50Excel13Plugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="Sage50Excel13Plugin.RibAciBI, Sage50Excel13Plugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
             </vstov4.1:ribbonTypes>
           </vstov4:appAddIn>
         </vstov4:customization>
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=REY-PC\Mary" issuerKeyHash="c8fbcf4e985f9273d5a48b4a389233a83cb35575" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>eUM8h67I+VDurjwl2i2ulM8uWDbyQYaJwVOHl4YoTRc=</DigestValue></Reference></SignedInfo><SignatureValue>sInxJ99ZoEcgKvj0tScr1rbx2XawZolIAmaXHJYEoij1t7N0W/hdxrGo8kkyJLUbU6LGY7xsYxY182KosdEQGaYSvO/dTCyXvaIF3DS4U3l2qjwadNH1uCNYN7uge6NkyfU2QilP6KTgDJGmRxk/6grwLhirE+NPdQjHzFRZ1kY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="174d2886978753c1898641f236582ecf94ae2dda253caeee50f9c8ae873c4379" Description="" Url=""><as:assemblyIdentity name="Sage50Excel13Plugin.dll" version="1.0.0.0" publicKeyToken="9a2d679947b24e1c" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=REY-PC\Mary</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>iEMaHIg7VkHci6+PIj2MDymLjoUh8QQBdxRg5JFmci8=</DigestValue></Reference></SignedInfo><SignatureValue>bfD/3qEmH/vQD2Tlwjqly4PoPlpCdBGGT/w9fr9SFKtXo4D0j1tLdswMlUX+vsyuc6IT4rHrgAGgLUg7wr2iI45w9DgQfZOtteKP/Rr4Rzn0+5yOkTM2CiO+tQ/t3MEpJk7JQUS0fuOJr2Wq+YWtxDE6tlCqijMzb1c9cMoxKaM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQVOCNTWe6u5FGuXPR4nSN2DANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAUgBFAFkALQBQAEMAXABNAGEAcgB5MB4XDTE3MDgwNTE5MjgxMFoXDTE4MDgwNjAxMjgxMFowITEfMB0GA1UEAx4WAFIARQBZAC0AUABDAFwATQBhAHIAeTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBavpbd3iZgh7nkyaqmrCMI9kMC3h1pDAEflEA8KaWlKbx50ifr9yv3RPwyhWXP0puQbJOeo+Xrbdby/hkpymy60EfiHr4BBgwF9bJRYFPBymTW06DxMST3+7ubbWMWiX9g08KPekHf97BX5Ee6hHs+m1zTEXYMjMYNsOYnFtBoRQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=REY-PC\Mary" issuerKeyHash="c8fbcf4e985f9273d5a48b4a389233a83cb35575" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>yOF3b144fI8M99qXEWEnI7HFZ/eClaswJYo3zFMiZ1U=</DigestValue></Reference></SignedInfo><SignatureValue>Z6FZ6mTfuvX/f84xqIWJWSK+cXGp3FesH1o4Q4jEZFxTa/b6bN1wdj4Ny0OqFAwktvS95gcrQdlaXMtoPekdbvfvjB5wKVCf5lnRx+Cv8nS6HKuh0s3OSlwheBIoAUqITG8O9/oIubhIoNaSa0BXg4Yqgqc7+5/9YfWIJYE8P6E=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="55672253cc378a2530ab9582f767c5b12327611197daf70c8f7c385e6f77e1c8" Description="" Url=""><as:assemblyIdentity name="Sage50Excel13Plugin.dll" version="1.0.0.0" publicKeyToken="9a2d679947b24e1c" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=REY-PC\Mary</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Fuv0TzmAj7GvOfBP22K3NlsFC2PsCvU7Rt5qYJYVhH8=</DigestValue></Reference></SignedInfo><SignatureValue>O793sLXotGxgck7jOfnC29x872f6xSGsYC7HCjdYa+G8hQjBFXH4H7CPmsyQK1oZtxPZxP4fMKrni2+ypIpd6V3nBjJaaEu0iMS7R1LF4gMAUc96S9sSSIz9Xu58IoPD9ZXJ1Yfa5Uqsb0L1P24vHUBom22R24XghovtydYtClU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQVOCNTWe6u5FGuXPR4nSN2DANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAUgBFAFkALQBQAEMAXABNAGEAcgB5MB4XDTE3MDgwNTE5MjgxMFoXDTE4MDgwNjAxMjgxMFowITEfMB0GA1UEAx4WAFIARQBZAC0AUABDAFwATQBhAHIAeTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuDgAfRwK1P7XkzodVfWefKAOZ0Z/Qh30JpYwCjdv7kJzKvplVpIn+9/ehAViGaZCL2OadyDdHkx7M971zUsMc1ev6qCXMYY1xukBt9NSJijajjlJKhU/WaTYa7rStGMYfPg7h3Mg/YYFA8h6eC1ns1cq+g9xyLjPOMBRsFF45XUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBavpbd3iZgh7nkyaqmrCMI9kMC3h1pDAEflEA8KaWlKbx50ifr9yv3RPwyhWXP0puQbJOeo+Xrbdby/hkpymy60EfiHr4BBgwF9bJRYFPBymTW06DxMST3+7ubbWMWiX9g08KPekHf97BX5Ee6hHs+m1zTEXYMjMYNsOYnFtBoRQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

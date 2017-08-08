@@ -12,17 +12,13 @@ namespace Sage50Excel13Plugin
     
     class DbConnetion
     {
-
-
-        public string strConn = "Driver={Pervasive ODBC Client Interface};"+
-                                "servername=localhost;dbq=HiedraYBambuSA;" +
-                                "uid=Peachtree;"+
-                                "pwd=admin123";
+        DbParam param = new DbParam();
+ 
 
         public OdbcConnection StartConn()
         {
 
-            OdbcConnection con = new OdbcConnection(strConn);
+            OdbcConnection con = new OdbcConnection(param.ConString());
 
             con.Open();
 

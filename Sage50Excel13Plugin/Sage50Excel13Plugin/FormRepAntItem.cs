@@ -11,13 +11,14 @@ using System.Data.Odbc;
 using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Excel;
 
+
 namespace Sage50Excel13Plugin
 {
-    public partial class Form1 : Form
+    public partial class FormRepAntItem : Form
     {
         DbConnetion dbConn = new DbConnetion();
 
-        public Form1()
+        public FormRepAntItem()
         {
             InitializeComponent();
             PopulateCboBox();
@@ -39,37 +40,37 @@ namespace Sage50Excel13Plugin
                                " INNER JOIN LineItem ON LineItem.ItemRecordNumber = JrnlRow.ItemRecordNumber " +
                                " INNER JOIN Customers ON Customers.CustomerRecordNumber = JrnlRow.CustomerRecordNumber " +
                                " WHERE " +
-                               " JrnlHdr.JrnlKey_Journal = '3' AND JrnlHdr.MainAmount > ABS(AmountPaid) AND JrnlRow.RowType = '0'"+
+                               " JrnlHdr.JrnlKey_Journal = '3' AND JrnlHdr.MainAmount > ABS(AmountPaid) AND JrnlRow.RowType = '0'" +
                                " Group by ItemID Order by ItemID ASC ";
 
                 dbConn.Query(query).Fill(data);
 
-                CboItemlist.DataSource    = data;
-                CboItemlist.ValueMember   = "ItemID";
-                CboItemlist.DisplayMember = "ItemID"; 
+                CboItemlist.DataSource = data;
+                CboItemlist.ValueMember = "ItemID";
+                CboItemlist.DisplayMember = "ItemID";
             }
         }
 
         private void BtnGetreport_Click(object sender, EventArgs e)
         {
-            
+
 
             DbConnetion dbConn = new DbConnetion();
-            
+
             Excel._Worksheet objSheet;
-            
-            Dictionary<string,double> custAmount = new Dictionary<string,double>();
+
+            Dictionary<string, double> custAmount = new Dictionary<string, double>();
             string Customers = "";
             string valToCell = "";
-            double[]  sumAmount  = new double[6];
+            double[] sumAmount = new double[6];
             string itemId = Convert.ToString(CboItemlist.SelectedValue);
 
             try
             {
-               
+
                 objSheet = Globals.ThisAddIn.Application.ActiveSheet;
                 objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 7]].Clear();
-                
+
                 //STAR BD CONNETION
                 dbConn.StartConn();
 
@@ -85,7 +86,7 @@ namespace Sage50Excel13Plugin
                     objSheet.Range[objSheet.Cells[5, 2], objSheet.Cells[999, 7]].NumberFormat = "#,###.00";
 
                     //TABLE HEADER
-                    objSheet.Cells[1, 1]= "SALDO DE CxC POR ITEM ID";
+                    objSheet.Cells[1, 1] = "SALDO DE CxC POR ITEM ID";
                     objSheet.Cells[5, 1] = "Customer";
                     objSheet.Cells[5, 2] = "0-30";
                     objSheet.Cells[5, 3] = "31-60";
@@ -111,19 +112,19 @@ namespace Sage50Excel13Plugin
                                     " AND LineItem.ItemID = '" + itemId + "' " +
                                     " Group by TransactionDate , Customer_Bill_Name" +
                                     " Order by Customers.Customer_Bill_Name;";
-                                    
-                                  
+
+
                     dbConn.Query(query).Fill(data);
 
                     if (data.Rows.Count > 0)
                     {
                         int i = 0;
                         int n = i;
-                       
 
-                        while (i < data.Rows.Count) {
 
-                            
+                        while (i < data.Rows.Count)
+                        {
+
 
                             if (data.Rows[i].ItemArray[0] != null)
                             {
@@ -131,7 +132,7 @@ namespace Sage50Excel13Plugin
 
                                 double days = (DateTime.Today - Convert.ToDateTime(dateTrx)).TotalDays; //Days Expired
 
-                                
+
 
                                 if (Customers != data.Rows[i].ItemArray[0].ToString())
                                 {
@@ -142,15 +143,15 @@ namespace Sage50Excel13Plugin
                                 }
                                 else
                                 {
-                                    n = n ;
+                                    n = n;
                                 }
 
                                 if (days <= 30)
                                 {
-                                
-                                     valToCell = SumValue((objSheet.Cells[n + 6, 2] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
 
-                                     objSheet.Cells[n + 6, 2] = valToCell;
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 2] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
+
+                                    objSheet.Cells[n + 6, 2] = valToCell;
 
                                 }
                                 if (days > 30 & days <= 60)
@@ -172,17 +173,17 @@ namespace Sage50Excel13Plugin
                                     objSheet.Cells[n + 6, 5] = valToCell;
                                 }
 
-                                if (days > 120) 
+                                if (days > 120)
                                 {
                                     valToCell = SumValue((objSheet.Cells[n + 6, 6] as Excel.Range).Value, data.Rows[i].ItemArray[2].ToString());
 
                                     objSheet.Cells[n + 6, 6] = valToCell;
                                 }
-                                
 
-                                objSheet.Cells[n + 6, 7].Formula = "=Sum(B" + (n+6) + ":F" + (n + 6) + ")"; //Total
 
-                                
+                                objSheet.Cells[n + 6, 7].Formula = "=Sum(B" + (n + 6) + ":F" + (n + 6) + ")"; //Total
+
+
                                 i++;
 
 
@@ -192,9 +193,9 @@ namespace Sage50Excel13Plugin
 
                         }
                     }
-                  
+
                     //elimina lineas en blanco
-                    Excel.Range range =objSheet.UsedRange;
+                    Excel.Range range = objSheet.UsedRange;
                     int rowcount = range.Rows.Count;
                     for (int l = 6; l < rowcount; l++)
                     {
@@ -225,7 +226,7 @@ namespace Sage50Excel13Plugin
 
         }
 
-        public string SumValue(object val1 , string val2)
+        public string SumValue(object val1, string val2)
         {
             string cellValue;
             double sum;
@@ -233,10 +234,17 @@ namespace Sage50Excel13Plugin
 
             if (val1 == null) { val1 = 0; }
 
-            sum =  Convert.ToDouble(val1) + Convert.ToDouble(val2);
+            sum = Convert.ToDouble(val1) + Convert.ToDouble(val2);
             cellValue = Convert.ToString(sum);
 
-        return cellValue;
+            return cellValue;
         }
+
+
+
+
+
+
+
     }
 }
