@@ -41,27 +41,29 @@ namespace Sage50Excel13Plugin
         public void GetValueFromFile()
         {
 
-            // create reader & open file
-            TextReader file = new StreamReader("Sage50db.txt");
+            if (File.Exists("Sage50db.txt"))
+            {
+                // create reader & open file
+                TextReader file = new StreamReader("Sage50db.txt");
 
-            Hostaname = file.ReadLine();
-            dbname = file.ReadLine();
-            User = file.ReadLine();
-            Password = file.ReadLine();
+                Hostaname = file.ReadLine();
+                dbname = file.ReadLine();
+                User = file.ReadLine();
+                Password = file.ReadLine();
 
 
-            // close the stream
-            file.Close();
+                // close the stream
+                file.Close();
+            }
 
         }
 
         public string ConString()
         {
-            string strConn;
-            string path = Sage50db.txt.Text;
+            string strConn = "";
 
             // create reader & open file
-           if (File.Exists("Sage50db.txt"){
+           if (File.Exists("Sage50db.txt")){
 
                 TextReader file = new StreamReader("Sage50db.txt");
 
