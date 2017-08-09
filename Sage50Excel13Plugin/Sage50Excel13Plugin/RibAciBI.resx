@@ -117,4 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;GrpReports.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;GrpReports.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RibAciBI.OfficeMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnAntItem.Parent" xml:space="preserve">
+    <value>GrpReports</value>
+  </data>
+  <data name="&gt;&gt;BtnCondb.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;BtnInfo.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;BtnCondb.Parent" xml:space="preserve">
+    <value>GrpConfigACI</value>
+  </data>
+  <data name="&gt;&gt;GrpReports.Parent" xml:space="preserve">
+    <value>TabACI</value>
+  </data>
+  <data name="&gt;&gt;BtnAntItem.Name" xml:space="preserve">
+    <value>BtnAntItem</value>
+  </data>
+  <data name="&gt;&gt;BtnCondb.Name" xml:space="preserve">
+    <value>BtnCondb</value>
+  </data>
+  <data name="&gt;&gt;BtnAntItem.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.ButtonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;TabACI.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.TabView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrpConfigACI.Label" xml:space="preserve">
+    <value>Configuracion</value>
+  </data>
+  <data name="&gt;&gt;RibAciBI.OfficeMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnAntItem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BtnInfo.Label" xml:space="preserve">
+    <value>Acerca de ACI BI</value>
+  </data>
+  <data name="&gt;&gt;RibAciBI.OfficeMenu.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.OfficeMenuView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnAntItem.Label" xml:space="preserve">
+    <value>Antigüedad por Item</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>RibAciBI</value>
+  </data>
+  <data name="&gt;&gt;BtnInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RibAciBI.OfficeMenu.Name" xml:space="preserve">
+    <value>RibAciBI.OfficeMenu</value>
+  </data>
+  <data name="&gt;&gt;BtnCondb.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GrpConfigACI.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabACI.Label" xml:space="preserve">
+    <value>ACI  BI</value>
+  </data>
+  <data name="&gt;&gt;GrpConfigACI.Parent" xml:space="preserve">
+    <value>TabACI</value>
+  </data>
+  <data name="&gt;&gt;GrpConfigACI.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GroupView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GrpReports.Label" xml:space="preserve">
+    <value>Reportes</value>
+  </data>
+  <data name="&gt;&gt;BtnInfo.Parent" xml:space="preserve">
+    <value>GrpConfigACI</value>
+  </data>
+  <data name="&gt;&gt;GrpConfigACI.Name" xml:space="preserve">
+    <value>GrpConfigACI</value>
+  </data>
+  <data name="&gt;&gt;GrpReports.Name" xml:space="preserve">
+    <value>GrpReports</value>
+  </data>
+  <data name="BtnCondb.Label" xml:space="preserve">
+    <value>Conexion</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Microsoft.VisualStudio.Tools.Office.Ribbon.View.GenericRibbonView, Microsoft.VisualStudio.Tools.Office.Designer, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;BtnInfo.Name" xml:space="preserve">
+    <value>BtnInfo</value>
+  </data>
+  <data name="&gt;&gt;TabACI.Name" xml:space="preserve">
+    <value>TabACI</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
 </root>

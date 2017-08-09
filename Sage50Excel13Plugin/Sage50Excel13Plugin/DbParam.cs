@@ -71,9 +71,11 @@ namespace Sage50Excel13Plugin
                 dbname = file.ReadLine();
                 User = file.ReadLine();
                 Password = file.ReadLine();
+                
 
                 strConn = "Driver={Pervasive ODBC Client Interface};" +
-                                    "servername=" + Hostaname + ";dbq=" + dbname + ";" +
+                                    "servername=" + Hostaname + ";"+
+                                    "dbq=" + dbname + ";" +
                                     "uid=" + User + ";" +
                                     "pwd=" + Password;
 

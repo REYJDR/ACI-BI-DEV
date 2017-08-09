@@ -8,12 +8,12 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ACI BI")]
-[assembly: AssemblyDescription("Sage50Excel13Plugin")]
+[assembly: AssemblyDescription("Gestor de Reportes financieros para Sage50 Peachtree.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DAOUTEL")]
-[assembly: AssemblyProduct("ACI BI")]
-[assembly: AssemblyCopyright("Copyright ©  APCON  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("APCON Consulting, Inc.")]
+[assembly: AssemblyProduct("Complemento  ACI BI")]
+[assembly: AssemblyCopyright("Copyright ©  APCON Consulting, Inc.  2017")]
+[assembly: AssemblyTrademark("APCON ACI BI")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -34,7 +34,7 @@ using System.Security;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: NeutralResourcesLanguage("en")]
 

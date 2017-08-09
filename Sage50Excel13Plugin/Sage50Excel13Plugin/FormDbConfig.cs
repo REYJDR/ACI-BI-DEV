@@ -47,9 +47,30 @@ namespace Sage50Excel13Plugin
             conParams.Dbname = textDb.Text;
             /*END READ AND SAVE CONNECTION PARAMETERS*/
 
-            /*Save params values */
-            conParams.SetValueOnFile();
 
+
+            //Test BD CONNETION
+            DbConnetion dbConn = new DbConnetion();
+            try
+            {   
+                /*Abre conexion para test*/
+                dbConn.StartConn();
+
+                /*Save params values */
+                conParams.SetValueOnFile();
+            }
+            catch(Exception theException)
+            {
+                String errorMessage;
+                errorMessage = "Error: ";
+                errorMessage = String.Concat(errorMessage, theException.Message);
+                errorMessage = String.Concat(errorMessage, " Line: ");
+                errorMessage = String.Concat(errorMessage, theException.Source);
+
+                MessageBox.Show(errorMessage, "Error");
+
+            }
+            
 
         }
     }

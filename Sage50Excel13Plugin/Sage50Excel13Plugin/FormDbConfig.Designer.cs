@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDbConfig));
             this.BtnDbSave = new System.Windows.Forms.Button();
             this.textHost = new System.Windows.Forms.TextBox();
             this.textDb = new System.Windows.Forms.TextBox();
@@ -41,7 +42,7 @@
             // 
             // BtnDbSave
             // 
-            this.BtnDbSave.Location = new System.Drawing.Point(243, 101);
+            this.BtnDbSave.Location = new System.Drawing.Point(272, 85);
             this.BtnDbSave.Name = "BtnDbSave";
             this.BtnDbSave.Size = new System.Drawing.Size(75, 23);
             this.BtnDbSave.TabIndex = 0;
@@ -53,21 +54,21 @@
             // 
             this.textHost.Location = new System.Drawing.Point(95, 10);
             this.textHost.Name = "textHost";
-            this.textHost.Size = new System.Drawing.Size(100, 20);
+            this.textHost.Size = new System.Drawing.Size(165, 20);
             this.textHost.TabIndex = 1;
             // 
             // textDb
             // 
             this.textDb.Location = new System.Drawing.Point(95, 36);
             this.textDb.Name = "textDb";
-            this.textDb.Size = new System.Drawing.Size(100, 20);
+            this.textDb.Size = new System.Drawing.Size(165, 20);
             this.textDb.TabIndex = 2;
             // 
             // textUser
             // 
             this.textUser.Location = new System.Drawing.Point(95, 62);
             this.textUser.Name = "textUser";
-            this.textUser.Size = new System.Drawing.Size(100, 20);
+            this.textUser.Size = new System.Drawing.Size(165, 20);
             this.textUser.TabIndex = 3;
             // 
             // textPass
@@ -75,7 +76,7 @@
             this.textPass.Location = new System.Drawing.Point(95, 88);
             this.textPass.Name = "textPass";
             this.textPass.PasswordChar = '*';
-            this.textPass.Size = new System.Drawing.Size(100, 20);
+            this.textPass.Size = new System.Drawing.Size(165, 20);
             this.textPass.TabIndex = 4;
             this.textPass.UseSystemPasswordChar = true;
             // 
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 136);
+            this.ClientSize = new System.Drawing.Size(359, 127);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.lblDb);
@@ -129,6 +130,7 @@
             this.Controls.Add(this.textDb);
             this.Controls.Add(this.textHost);
             this.Controls.Add(this.BtnDbSave);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDbConfig";
             this.Text = "Conexion Sage Peachtree";
             this.ResumeLayout(false);

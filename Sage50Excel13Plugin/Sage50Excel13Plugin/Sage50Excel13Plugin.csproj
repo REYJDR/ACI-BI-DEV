@@ -30,8 +30,8 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>\\REY-PC\Users\Mary\Desktop\Deploy\</PublishUrl>
-    <InstallUrl>\\REY-PC\Users\Mary\Desktop\Deploy\</InstallUrl>
+    <PublishUrl>\\localhost\Deploy\</PublishUrl>
+    <InstallUrl>\\localhost\Deploy\</InstallUrl>
     <TargetCulture>es</TargetCulture>
     <ApplicationVersion>1.0.0.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
@@ -48,7 +48,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -58,7 +58,7 @@
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <ProductName>Runtime de Microsoft Visual Studio 2010 Tools para Office %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -180,6 +180,12 @@
     <Compile Include="FormDbConfig.Designer.cs">
       <DependentUpon>FormDbConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInformation.Designer.cs">
+      <DependentUpon>FormInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRepAntItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </Compile>
     <EmbeddedResource Include="FormDbConfig.resx">
       <DependentUpon>FormDbConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInformation.resx">
+      <DependentUpon>FormInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRepAntItem.resx">
       <DependentUpon>FormRepAntItem.cs</DependentUpon>
@@ -228,6 +237,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="Sage50Excel13Plugin_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -236,12 +246,28 @@
     </Compile>
     <AppDesigner Include="Properties\" />
     <None Include="VS_KEY_5CD1C560B803D9F7.pfx" />
+    <None Include="VS_KEY_60A516632DB57E04.pfx" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACIBILOGO.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button White Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apcon_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ribbon.xml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -251,10 +277,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>VS_KEY_5CD1C560B803D9F7.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Sage50Excel13Plugin_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4BED124CA6FE993462A51CBE5F3EFF1680587C63</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>361EE1E21AD0DF81C6E71B86BA84AC22E151137E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -273,10 +299,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>VS_KEY_5CD1C560B803D9F7.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>VS_KEY_60A516632DB57E04.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

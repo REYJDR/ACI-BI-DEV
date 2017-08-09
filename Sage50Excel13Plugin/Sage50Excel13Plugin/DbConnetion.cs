@@ -51,16 +51,18 @@ namespace Sage50Excel13Plugin
                 datos = new OdbcDataAdapter(query, StartConn());
                
             }
-            catch
+           catch(Exception msg)
             {
-                MessageBox.Show("Error al ejecutar query " + query);
 
-
+                MessageBox.Show("Error al ejecutar query " + msg);
+                
             }
 
             return datos;
             
         }
+
+
 
     }
 }
