@@ -49,7 +49,7 @@
             this.TabACI.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.TabACI.Groups.Add(this.GrpReports);
             this.TabACI.Groups.Add(this.GrpConfigACI);
-            this.TabACI.Label = "ACI REPORT";
+            this.TabACI.Label = "ACI  BI";
             this.TabACI.Name = "TabACI";
             // 
             // GrpReports

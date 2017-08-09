@@ -45,19 +45,20 @@
             // CboItemlist
             // 
             this.CboItemlist.FormattingEnabled = true;
-            this.CboItemlist.Location = new System.Drawing.Point(15, 25);
+            this.CboItemlist.Location = new System.Drawing.Point(12, 28);
             this.CboItemlist.Name = "CboItemlist";
             this.CboItemlist.Size = new System.Drawing.Size(142, 21);
             this.CboItemlist.TabIndex = 4;
             // 
             // BtnGetreport
             // 
-            this.BtnGetreport.Location = new System.Drawing.Point(237, 23);
+            this.BtnGetreport.Location = new System.Drawing.Point(243, 28);
             this.BtnGetreport.Name = "BtnGetreport";
             this.BtnGetreport.Size = new System.Drawing.Size(87, 26);
             this.BtnGetreport.TabIndex = 3;
             this.BtnGetreport.Text = "Consultar";
             this.BtnGetreport.UseVisualStyleBackColor = true;
+            this.BtnGetreport.Click += new System.EventHandler(this.BtnGetreport_Click_1);
             // 
             // FormRepAntItem
             // 

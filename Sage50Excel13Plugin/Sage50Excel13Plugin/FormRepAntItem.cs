@@ -51,7 +51,22 @@ namespace Sage50Excel13Plugin
             }
         }
 
-        private void BtnGetreport_Click(object sender, EventArgs e)
+
+        public string SumValue(object val1, string val2)
+        {
+            string cellValue;
+            double sum;
+
+
+            if (val1 == null) { val1 = 0; }
+
+            sum = Convert.ToDouble(val1) + Convert.ToDouble(val2);
+            cellValue = Convert.ToString(sum);
+
+            return cellValue;
+        }
+
+        private void BtnGetreport_Click_1(object sender, EventArgs e)
         {
 
 
@@ -223,28 +238,6 @@ namespace Sage50Excel13Plugin
 
                 MessageBox.Show(errorMessage, "Error");
             }
-
         }
-
-        public string SumValue(object val1, string val2)
-        {
-            string cellValue;
-            double sum;
-
-
-            if (val1 == null) { val1 = 0; }
-
-            sum = Convert.ToDouble(val1) + Convert.ToDouble(val2);
-            cellValue = Convert.ToString(sum);
-
-            return cellValue;
-        }
-
-
-
-
-
-
-
     }
 }

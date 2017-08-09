@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sage50Excel13Plugin",
-    "\\Sage50Excel13Plugin\\Sage50Excel13Plugin",
-    "\\Sage50Excel13Plugin\\Sage50Excel13Plugin\\bin\\Debug",
-    "\\Sage50Excel13Plugin\\Sage50Excel13Plugin\\bin\\x86",
-    "\\Sage50Excel13Plugin\\Sage50Excel13Plugin\\bin\\x86\\Debug"
+    "\\Sage50Excel13Plugin"
   ],
-  "SelectedNode": "\\Sage50Excel13Plugin\\Sage50Excel13Plugin\\Ribbon1.Designer.cs",
+  "SelectedNode": "\\Sage50Excel13Plugin\\Sage50Excel13Plugin.sln",
   "PreviewInSolutionExplorer": false
 }
