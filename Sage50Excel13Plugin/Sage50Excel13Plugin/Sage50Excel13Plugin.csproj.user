@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>ftp://daoutel.net/home/daoutqw3/public_html/ACIREPORT/SAGE_UNPAID_INVOICE/release/|ftp://daoutel.net/|C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\release\v1.0\</PublishUrlHistory>
+    <PublishUrlHistory>C:\Program Files %28x86%29\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\release\v1.4\|ftp://daoutel.net/home/daoutqw3/public_html/ACIREPORT/SAGE_UNPAID_INVOICE/release/|ftp://daoutel.net/|C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\release\v1.0\</PublishUrlHistory>
     <InstallUrlHistory>http://www.daoutel.net/|http://daoutel.net/</InstallUrlHistory>
     <SupportUrlHistory>http://www.apconconsulting.com</SupportUrlHistory>
   </PropertyGroup>

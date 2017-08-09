@@ -30,10 +30,10 @@
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>ftp://daoutel.net/home/daoutqw3/public_html/ACIREPORT/SAGE_UNPAID_INVOICE/release/</PublishUrl>
+    <PublishUrl>C:\Program Files %28x86%29\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\release\v1.4\</PublishUrl>
     <InstallUrl />
     <TargetCulture>es</TargetCulture>
-    <ApplicationVersion>1.0.0.3</ApplicationVersion>
+    <ApplicationVersion>1.0.0.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
