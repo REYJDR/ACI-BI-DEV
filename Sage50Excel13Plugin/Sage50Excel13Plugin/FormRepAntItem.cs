@@ -102,10 +102,10 @@ namespace Sage50Excel13Plugin
 
                     //INI TABLE STYLING
                         //HEADER COLOR
-                        objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 8]].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Blue);
+                        objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 8]].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Azure);
 
-                    //MERGED CELLS
-                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 7]].Merge();
+                        //MERGED CELLS
+                        objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 7]].Merge();
                     
                         //TEXT ALIGN
                         objSheet.Cells[1, 1].Style.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
