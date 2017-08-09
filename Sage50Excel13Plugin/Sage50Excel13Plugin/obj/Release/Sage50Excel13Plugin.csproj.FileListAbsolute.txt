@@ -9,7 +9,6 @@ C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Microsoft.Office.Tools.Excel.dll
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
-C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.FormDbConfig.resources
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.FormRepAntItem.resources
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.Properties.Resources.resources
@@ -17,3 +16,4 @@ C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csproj.GenerateResource.Cache
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.dll
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.pdb
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.tlb
