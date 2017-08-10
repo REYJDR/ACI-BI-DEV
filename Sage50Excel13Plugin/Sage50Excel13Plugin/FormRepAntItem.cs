@@ -68,20 +68,23 @@ namespace Sage50Excel13Plugin
 
         private void BtnGetreport_Click_1(object sender, EventArgs e)
         {
-
-
+            
             DbConnetion dbConn = new DbConnetion();
 
             Excel._Worksheet objSheet;
 
-            Dictionary<string, double> custAmount = new Dictionary<string, double>();
-            string Customers = "";
-            string valToCell = "";
-            double[] sumAmount = new double[6];
-            string itemId = Convert.ToString(CboItemlist.SelectedValue);
-            string itemFilter = "";
-            string selection = "";
+          //  Dictionary<string, double> custAmount = new Dictionary<string, double>();
 
+          // double[] sumAmount = new double[6];
+
+            string customers = "";
+            string invoice   = "";
+            string valToCell = "";
+            string itemFilter = "";
+            string selection  = "";
+            string itemId = Convert.ToString(CboItemlist.SelectedValue);
+            
+            
             //ALL CHECKED
             if (!checkTodos.Checked)
             {
@@ -156,22 +159,26 @@ namespace Sage50Excel13Plugin
                                 string dateTrx = data.Rows[i].ItemArray[2].ToString(); //Transaction Date
 
                                 double days = (DateTime.Today - Convert.ToDateTime(dateTrx)).TotalDays; //Days Expired
+                                
 
-
-
-                                if (Customers != data.Rows[i].ItemArray[0].ToString())
+                                if (invoice != data.Rows[i].ItemArray[0].ToString())
                                 {
-                                    objSheet.Cells[i + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
-                                    objSheet.Cells[i + 6, 2] = data.Rows[i].ItemArray[1].ToString(); //Invoice Number
-                                    Customers = data.Rows[i].ItemArray[0].ToString();
-
+                                   
+                                   
+                                   objSheet.Cells[i + 6, 2] = data.Rows[i].ItemArray[1].ToString(); //Invoice Number
+                                   invoice   = data.Rows[i].ItemArray[1].ToString(); 
+                                    
                                     n = i;
                                 }
-                                else
+                             /*   else
                                 {
                                     n = n;
-                                }
+                                }*/
 
+                                objSheet.Cells[i + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
+                                // customers = data.Rows[i].ItemArray[0].ToString();
+
+                                //EXPIRE DAY
                                 if (days <= 30)
                                 {
 
