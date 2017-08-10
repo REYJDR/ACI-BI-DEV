@@ -16,7 +16,9 @@ namespace Sage50Excel13Plugin
 {
     public partial class FormRepAntItem : Form
     {
+       
         DbConnetion dbConn = new DbConnetion();
+        System.Data.DataTable data = new System.Data.DataTable();
 
         public FormRepAntItem()
         {
@@ -28,8 +30,7 @@ namespace Sage50Excel13Plugin
         {
 
             dbConn.StartConn();
-            System.Data.DataTable data = new System.Data.DataTable();
-
+ 
             if (dbConn.StartConn().State == System.Data.ConnectionState.Open)
             {
 
@@ -68,16 +69,10 @@ namespace Sage50Excel13Plugin
 
         private void BtnGetreport_Click_1(object sender, EventArgs e)
         {
-            
-            DbConnetion dbConn = new DbConnetion();
+                     
 
             Excel._Worksheet objSheet;
 
-          //  Dictionary<string, double> custAmount = new Dictionary<string, double>();
-
-          // double[] sumAmount = new double[6];
-
-            string customers = "";
             string invoice   = "";
             string valToCell = "";
             string itemFilter = "";
@@ -93,6 +88,7 @@ namespace Sage50Excel13Plugin
             }
             else
             {
+                
                 selection = "TODOS";
             }
 
@@ -112,17 +108,19 @@ namespace Sage50Excel13Plugin
                     //TABLE HEADER
                     objSheet.Cells[1, 1] = "SALDO DE CxC POR ITEM ID";
                     objSheet.Cells[3, 1] = "Selección";
-                    objSheet.Cells[3, 2] = selection;
+                    objSheet.Cells[3, 2] =  selection;
                     objSheet.Cells[5, 1] = "Customer";
                     objSheet.Cells[5, 2] = "Invoice #";
-                    objSheet.Cells[5, 3] = "0-30";
-                    objSheet.Cells[5, 4] = "31-60";
-                    objSheet.Cells[5, 5] = "61-90";
-                    objSheet.Cells[5, 6] = "91-120";
-                    objSheet.Cells[5, 7] = "120+";
-                    objSheet.Cells[5, 8] = "Total";
+                    objSheet.Cells[5, 3] = "Status";
+                    objSheet.Cells[5, 4] = "0-30";
+                    objSheet.Cells[5, 5] = "31-60";
+                    objSheet.Cells[5, 6] = "61-90";
+                    objSheet.Cells[5, 7] = "91-120";
+                    objSheet.Cells[5, 8] = "120+";
+                    objSheet.Cells[5, 9] = "Total";
 
-                    System.Data.DataTable data = new System.Data.DataTable();
+                    data.Clear();
+
                     string query = "SELECT " +
                                     " Customers.Customer_Bill_Name, " +
                                     " JrnlHdr.Reference, " +
@@ -170,51 +168,64 @@ namespace Sage50Excel13Plugin
                                     
                                     n = i;
                                 }
-                             /*   else
-                                {
-                                    n = n;
-                                }*/
+                                
 
                                 objSheet.Cells[i + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
-                                // customers = data.Rows[i].ItemArray[0].ToString();
+
+                                if ((double)(data.Rows[i].ItemArray[4]) == 0)
+                                {
+
+                                    objSheet.Cells[i + 6, 3] = "Parcialmente pagado"; //Status
+                                    objSheet.Cells[i + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightGreen);
+
+                                }
+                                else
+                                {
+
+                                    objSheet.Cells[i + 6, 3] = "Pendiente de pago"; //Status
+                                    objSheet.Cells[i + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightYellow);
+                                }
+                               
+
+
 
                                 //EXPIRE DAY
                                 if (days <= 30)
                                 {
 
-                                    valToCell = SumValue((objSheet.Cells[n + 6, 3] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
-
-                                    objSheet.Cells[n + 6, 3] = valToCell;
-
-                                }
-                                if (days > 30 & days <= 60)
-                                {
                                     valToCell = SumValue((objSheet.Cells[n + 6, 4] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
 
                                     objSheet.Cells[n + 6, 4] = valToCell;
+
                                 }
-                                if (days > 60 & days <= 90)
+                                if (days > 30 & days <= 60)
                                 {
                                     valToCell = SumValue((objSheet.Cells[n + 6, 5] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
 
                                     objSheet.Cells[n + 6, 5] = valToCell;
                                 }
-                                if (days > 90 & days <= 120)
+                                if (days > 60 & days <= 90)
                                 {
                                     valToCell = SumValue((objSheet.Cells[n + 6, 6] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
 
                                     objSheet.Cells[n + 6, 6] = valToCell;
                                 }
-
-                                if (days > 120)
+                                if (days > 90 & days <= 120)
                                 {
                                     valToCell = SumValue((objSheet.Cells[n + 6, 7] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
 
                                     objSheet.Cells[n + 6, 7] = valToCell;
                                 }
 
+                                if (days > 120)
+                                {
+                                    valToCell = SumValue((objSheet.Cells[n + 6, 8] as Excel.Range).Value, data.Rows[i].ItemArray[3].ToString());
 
-                                objSheet.Cells[n + 6, 8].Formula = "=Sum(C" + (n + 6) + ":G" + (n + 6) + ")"; //Total
+                                    objSheet.Cells[n + 6, 8] = valToCell;
+                                }
+
+
+                                objSheet.Cells[n + 6, 9].Formula = "=Sum(C" + (n + 6) + ":G" + (n + 6) + ")"; //Total
 
 
                                 i++;
@@ -235,7 +246,7 @@ namespace Sage50Excel13Plugin
                         Excel.Range rg = objSheet.get_Range("A" + l.ToString());
                         if (Convert.ToString(rg.Value2) == null)
                         {
-                            ((Excel.Range)objSheet.Range["A" + l.ToString(), "H" + l.ToString()]).EntireRow.Delete(null);
+                            ((Excel.Range)objSheet.Range["A" + l.ToString(), "Z" + l.ToString()]).EntireRow.Delete(null);
                             l--;
                             rowcount--;
                         }
@@ -243,29 +254,28 @@ namespace Sage50Excel13Plugin
 
                     //INI TABLE STYLING
                     //COLOR
-                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 8]].Interior.Color = ColorTranslator.ToOle(Color.White);
+                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 9]].Interior.Color = ColorTranslator.ToOle(Color.White);
                     objSheet.Cells[3, 1].Interior.Color = ColorTranslator.ToOle(Color.Azure);
                     objSheet.Cells[3, 2].Interior.Color = ColorTranslator.ToOle(Color.GhostWhite);
-                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 8]].Interior.Color = ColorTranslator.ToOle(Color.Azure);
+                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Interior.Color = ColorTranslator.ToOle(Color.Azure);
                     //MERGED CELLS
-                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 8]].Merge();
+                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 9]].Merge();
 
                     //TEXT ALIGN
                     objSheet.get_Range("A1","A1").Style.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-                 //   objSheet.Range[objSheet.Cells[5, 3], objSheet.Cells[5, 8]].Style.HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
+                 
 
                     //BORDER
-                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 8]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
 
                     //CURRENCY CELLS
-                    objSheet.Range[objSheet.Cells[5, 3], objSheet.Cells[999, 8]].NumberFormat = "#,###.00";
+                    objSheet.Range[objSheet.Cells[5, 3], objSheet.Cells[999, 9]].NumberFormat = "#,###.00";
                     //END TABLE STYLING
 
-
-
+                    
                     //ACOMODA LAS CELDAS
                     objSheet.Columns.AutoFit();
-
+                    
                 }
             }
             catch (Exception theException)
@@ -278,6 +288,10 @@ namespace Sage50Excel13Plugin
 
                 MessageBox.Show(errorMessage, "Error");
             }
+
+
+            //Cierro ventana de filtro
+            this.Close();
         }
 
 
