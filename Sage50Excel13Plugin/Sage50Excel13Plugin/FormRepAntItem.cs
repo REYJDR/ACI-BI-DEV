@@ -18,7 +18,7 @@ namespace Sage50Excel13Plugin
     {
        
         DbConnetion dbConn = new DbConnetion();
-        System.Data.DataTable data = new System.Data.DataTable();
+       
 
         public FormRepAntItem()
         {
@@ -28,7 +28,7 @@ namespace Sage50Excel13Plugin
 
         public void PopulateCboBox()
         {
-
+            System.Data.DataTable data = new System.Data.DataTable();
             dbConn.StartConn();
  
             if (dbConn.StartConn().State == System.Data.ConnectionState.Open)
@@ -69,7 +69,7 @@ namespace Sage50Excel13Plugin
 
         private void BtnGetreport_Click_1(object sender, EventArgs e)
         {
-                     
+            System.Data.DataTable data = new System.Data.DataTable();
 
             Excel._Worksheet objSheet;
 
@@ -96,13 +96,35 @@ namespace Sage50Excel13Plugin
             {
 
                 objSheet = Globals.ThisAddIn.Application.ActiveSheet;
-                objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 8]].Clear();
+                objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 9]].Clear();
 
                 //STAR BD CONNETION
                 dbConn.StartConn();
 
                 if (dbConn.StartConn().State == System.Data.ConnectionState.Open)
                 {
+
+                    //INI TABLE STYLING
+                    //COLOR
+                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 9]].Interior.Color = ColorTranslator.ToOle(Color.White);
+                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 9]].Interior.Color = ColorTranslator.ToOle(Color.Azure); 
+                    
+                    objSheet.Cells[3, 1].Interior.Color = ColorTranslator.ToOle(Color.Azure);
+                    objSheet.Cells[3, 2].Interior.Color = ColorTranslator.ToOle(Color.GhostWhite);
+                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Interior.Color = ColorTranslator.ToOle(Color.Azure);
+                    //MERGED CELLS
+                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 9]].Merge();
+
+                    //TEXT ALIGN
+                    objSheet.get_Range("A1", "A1").Style.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+
+                    //BORDER
+                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                    //CURRENCY CELLS
+                    objSheet.Range[objSheet.Cells[5, 3], objSheet.Cells[999, 9]].NumberFormat = "#,###.00";
+                    //END TABLE STYLING
 
 
                     //TABLE HEADER
@@ -170,20 +192,20 @@ namespace Sage50Excel13Plugin
                                 }
                                 
 
-                                objSheet.Cells[i + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
+                                objSheet.Cells[n + 6, 1] = data.Rows[i].ItemArray[0].ToString(); //Customers
 
-                                if ((double)(data.Rows[i].ItemArray[4]) == 0)
+                                if (Convert.ToDouble(data.Rows[i].ItemArray[4]) == 0.00)
                                 {
 
-                                    objSheet.Cells[i + 6, 3] = "Parcialmente pagado"; //Status
-                                    objSheet.Cells[i + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightGreen);
+                                    objSheet.Cells[n + 6, 3] = "Parcialmente pagado"; //Status
+                                    objSheet.Cells[n + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightGreen);
 
                                 }
                                 else
                                 {
 
-                                    objSheet.Cells[i + 6, 3] = "Pendiente de pago"; //Status
-                                    objSheet.Cells[i + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightYellow);
+                                    objSheet.Cells[n + 6, 3] = "Pendiente de pago"; //Status
+                                    objSheet.Cells[n + 6, 3].Interior.Color = ColorTranslator.ToOle(Color.LightYellow);
                                 }
                                
 
@@ -225,7 +247,7 @@ namespace Sage50Excel13Plugin
                                 }
 
 
-                                objSheet.Cells[n + 6, 9].Formula = "=Sum(C" + (n + 6) + ":G" + (n + 6) + ")"; //Total
+                                objSheet.Cells[n + 6, 9].Formula = "=Sum(D" + (n + 6) + ":H" + (n + 6) + ")"; //Total
 
 
                                 i++;
@@ -252,26 +274,7 @@ namespace Sage50Excel13Plugin
                         }
                     }
 
-                    //INI TABLE STYLING
-                    //COLOR
-                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[999, 9]].Interior.Color = ColorTranslator.ToOle(Color.White);
-                    objSheet.Cells[3, 1].Interior.Color = ColorTranslator.ToOle(Color.Azure);
-                    objSheet.Cells[3, 2].Interior.Color = ColorTranslator.ToOle(Color.GhostWhite);
-                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Interior.Color = ColorTranslator.ToOle(Color.Azure);
-                    //MERGED CELLS
-                    objSheet.Range[objSheet.Cells[1, 1], objSheet.Cells[1, 9]].Merge();
-
-                    //TEXT ALIGN
-                    objSheet.get_Range("A1","A1").Style.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-                 
-
-                    //BORDER
-                    objSheet.Range[objSheet.Cells[5, 1], objSheet.Cells[5, 9]].Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
-
-                    //CURRENCY CELLS
-                    objSheet.Range[objSheet.Cells[5, 3], objSheet.Cells[999, 9]].NumberFormat = "#,###.00";
-                    //END TABLE STYLING
-
+                    
                     
                     //ACOMODA LAS CELDAS
                     objSheet.Columns.AutoFit();
