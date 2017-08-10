@@ -16,7 +16,6 @@ C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csproj.GenerateResource.Cache
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.dll
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.pdb
-C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.tlb
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.dll.config
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.dll
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.pdb
@@ -38,3 +37,4 @@ C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Ex
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.pdb
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\bin\Release\Sage50Excel13Plugin.tlb
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.FormInformation.resources

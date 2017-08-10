@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>\\localhost\Deploy\|\\METPPRDAOUR\Deploy\|D:\Deploy\</PublishUrlHistory>
-    <InstallUrlHistory>\\localhost\Deploy\|\\METPPRDAOUR\Deploy\</InstallUrlHistory>
+    <PublishUrlHistory>\\localhost\v1.8\|\\localhost\v1.7\</PublishUrlHistory>
+    <InstallUrlHistory>\\localhost\v1.8\|\\localhost\v1.7\</InstallUrlHistory>
     <SupportUrlHistory>http://www.apconconsulting.com</SupportUrlHistory>
   </PropertyGroup>
 </Project>

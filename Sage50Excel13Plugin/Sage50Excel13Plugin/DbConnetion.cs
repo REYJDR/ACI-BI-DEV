@@ -21,11 +21,7 @@ namespace Sage50Excel13Plugin
             OdbcConnection con = new OdbcConnection(param.ConString());
             try
             {
-
-               con.Open();
-
-                
-
+                con.Open();
             }
             catch (Exception theException)
             {
