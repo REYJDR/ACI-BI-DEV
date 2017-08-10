@@ -33,7 +33,7 @@
     <PublishUrl>\\localhost\v1.8\</PublishUrl>
     <InstallUrl>\\localhost\v1.8\</InstallUrl>
     <TargetCulture>es</TargetCulture>
-    <ApplicationVersion>1.0.0.13</ApplicationVersion>
+    <ApplicationVersion>1.0.0.14</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -274,10 +274,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>VS_KEY_60A516632DB57E04.pfx</ManifestKeyFile>
+    <ManifestKeyFile>VS_KEY_5CD1C560B803D9F7.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5645D8E83988421CC607FF9A9900C6A5CAD2C511</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>4BED124CA6FE993462A51CBE5F3EFF1680587C63</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -299,7 +299,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>VS_KEY_60A516632DB57E04.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>VS_KEY_5CD1C560B803D9F7.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
