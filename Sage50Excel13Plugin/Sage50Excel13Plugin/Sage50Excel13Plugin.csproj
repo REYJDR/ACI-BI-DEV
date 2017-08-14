@@ -172,6 +172,12 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="FormProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProgressBar.Designer.cs">
+      <DependentUpon>FormProgressBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbConnetion.cs" />
     <Compile Include="DbParam.cs" />
     <Compile Include="FormDbConfig.cs">
@@ -192,6 +198,7 @@
     <Compile Include="FormRepAntItem.Designer.cs">
       <DependentUpon>FormRepAntItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgressBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -200,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformation.resx">
       <DependentUpon>FormInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgressBar.resx">
+      <DependentUpon>FormProgressBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRepAntItem.resx">
       <DependentUpon>FormRepAntItem.cs</DependentUpon>

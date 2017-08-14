@@ -54,7 +54,7 @@
             // 
             // BtnGetreport
             // 
-            this.BtnGetreport.Location = new System.Drawing.Point(12, 70);
+            this.BtnGetreport.Location = new System.Drawing.Point(204, 69);
             this.BtnGetreport.Name = "BtnGetreport";
             this.BtnGetreport.Size = new System.Drawing.Size(87, 26);
             this.BtnGetreport.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 108);
+            this.ClientSize = new System.Drawing.Size(307, 104);
             this.Controls.Add(this.checkTodos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CboItemlist);
