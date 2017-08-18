@@ -59,9 +59,10 @@ namespace Sage50Excel13Plugin
 
             if (dbConn.StartConn().State == System.Data.ConnectionState.Open)
                 {
-
-
+                
                     MessageBox.Show("Test de conexión exitoso", "Test de conexión");
+                    this.Close();
+
                 }
             
 
