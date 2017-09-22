@@ -39,3 +39,4 @@ C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\
 C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.FormProgressBar.resources
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.FormProgressBar.resources
 C:\Users\RDAOU\Documents\GitHub\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Ampps\www\ACIWEB\SAGE_UNPAID_INVOICE\Sage50Excel13Plugin\Sage50Excel13Plugin\obj\Release\Sage50Excel13Plugin.csprojResolveAssemblyReference.cache

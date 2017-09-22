@@ -344,15 +344,15 @@ namespace Sage50Excel13Plugin
                                 if (Convert.ToDouble(data.Rows[i].ItemArray[4]) == 0.00)
                                 {
 
-                                    objSheet.Cells[n + 6, 4] = "Parcialmente pagado"; //Status
-                                    objSheet.Cells[n + 6, 4].Interior.Color = ColorTranslator.ToOle(Color.LightGreen);
+                                    objSheet.Cells[n + 6, 4] = "Pendiente de pago"; //Status
+                                    objSheet.Cells[n + 6, 4].Interior.Color = ColorTranslator.ToOle(Color.LightSalmon);
 
                                 }
                                 else
                                 {
+                                    objSheet.Cells[n + 6, 4] = "Parcialmente pagado"; //Status
+                                    objSheet.Cells[n + 6, 4].Interior.Color = ColorTranslator.ToOle(Color.LightGreen);
 
-                                    objSheet.Cells[n + 6, 4] = "Pendiente de pago"; //Status
-                                    objSheet.Cells[n + 6, 4].Interior.Color = ColorTranslator.ToOle(Color.LightSalmon);
                                 }
 
 

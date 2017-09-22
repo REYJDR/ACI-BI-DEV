@@ -14,7 +14,7 @@ namespace Sage50Excel13Plugin
         public void ProgressBarVal(int i,string text)
         {
             proForm.Show();
-            proForm.SetBarVal(i,text+" %");
+            proForm.SetBarVal(i, i+ " %");
         }
 
         public void FinishProcess()
